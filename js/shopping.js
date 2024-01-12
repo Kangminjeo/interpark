@@ -1,0 +1,47 @@
+window.addEventListener("load", function(){
+    // 탭메뉴 구현
+    let tabs = this.document.querySelectorAll(".slide-tabs li")
+    let tabCont= this.document.querySelectorAll(".shopping .slide-wrap")
+    for(let i = 0; i<tabs.length; i++){
+        tabs[i].onclick = function(event){
+            event.preventDefault();
+            for(let j = 0; j < tabs.length; j++){
+                tabs[j].classList.remove("active")
+                tabCont[j].classList.remove("active")
+            }
+            this.classList.add("active")
+            tabCont[1].classList.add("active")
+        }
+    }
+    // swiper적용
+    let shoppingSwiper = new Swiper(".sw-shopping",{
+        navigation: {
+            nextEl: ".shopping .sw-next",
+            prevEl: ".shopping .sw-prev",
+        },
+        slidesPerView: 2.3,
+        spaceBetween: 15,
+        grid:{
+            rows:2,
+            fill:"row",
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                slidesPerGroup:3,
+                grid:{
+                    rows:1,
+                },
+            },
+            1024:{
+                slidesPerView: 4,
+                spaceBetween: 25,
+                slidesPerGroup:4,
+                grid:{
+                    rows:1,
+                },
+            }
+        }
+    })
+})

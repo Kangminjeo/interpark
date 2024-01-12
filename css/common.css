@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+    color: #000;
+}
+a{
+    text-decoration: none;
+}
+ul,
+ol{
+    list-style: none;
+}
+button{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+/* custom */
+html{
+    font-size: 10px;
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'Pretendard';
+    font-weight: 400;
+}
+.inner{
+    width: 100%;
+    max-width: 1320px;
+    padding: 0 20px;
+    /* padding은 안으로 들어가기 때문에 1280만큼 주면 40이 없어지기 때문에 1290만큼 주고 싶으면 40을 더해줘야 함  */
+    margin: 0 auto;
+}
